@@ -1,0 +1,21 @@
+
+#MYSQL
+spring:
+  datasource:
+    url: jdbc:mysql://1.15.61.30:3306/change_project
+    username: melody
+    password: mysql_melody
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#项目启动
+server:
+  servlet:
+    context-path: /change       #项目访问路径
+  port: 8080                    #服务器HTTP端口
+
+#mybatis配置
+mybatis:
+  type-aliases-package: com.vincent.change.entity.userinfo
+  mapper-locations: classpath:mapper/*.xml
+
+#热部署

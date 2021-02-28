@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.vincent.change.mapper.UserinfoMapper">
+
+    <resultMap type="com.vincent.change.entity.userinfo" id="UserinfoResultMap">
+        <!-- 配置映射的订单信息 -->
+        <!-- id：指定查询列中的唯 一标识，订单信息的中的唯 一标识，如果有多个列组成唯一标识，配置多个id
+            column：订单信息的唯 一标识 列
+            property：订单信息的唯 一标识 列所映射到Orders中哪个属性
+          -->
+        <id column="id" property="id"/>
+        <result column="userid" property="userid"/>
+        <result column="username" property="username"/>
+        <result column="gender" property="gender"/>
+        <result column="brithday" property="brithday"/>
+        <result column="tel" property="tel"/>
+        <result column="createday" property="createday"/>
+        <result column="extend1" property="extend1"/>
+        <result column="extend" property="extend"/>
+    </resultMap>
+
+    <select id="findList" resultMap="UserinfoResultMap">
+        select * from userinfo
+    </select>
+</mapper>
