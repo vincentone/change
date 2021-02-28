@@ -6,7 +6,16 @@ spring:
     username: melody
     password: mysql_melody
     driver-class-name: com.mysql.cj.jdbc.Driver
-
+  #controller返回html
+  freemarker:
+    suffix: .html
+    cache: false  #页面不加载缓存，修改即时生效
+  #热部署
+  devtools:
+    restart:
+      enabled: true #设置开启热部署
+      additional-paths: src/main/java #重启目录
+#      exclude:   #排除目录
 #项目启动
 server:
   servlet:
@@ -17,5 +26,3 @@ server:
 mybatis:
   type-aliases-package: com.vincent.change.entity.userinfo
   mapper-locations: classpath:mapper/*.xml
-
-#热部署

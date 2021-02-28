@@ -1,0 +1,8 @@
+com/vincent/change/mapper/UserinfoMapper.class
+com/vincent/change/entity/userinfo.class
+com/vincent/change/controller/helloSpringBoot.class
+com/vincent/change/service/UserInfoService.class
+com/vincent/change/hello2SpringBoot.class
+com/vincent/change/ServletInitializer.class
+com/vincent/change/service/impl/UserinfoServiceimpl.class
+com/vincent/change/ChangeApplication.class

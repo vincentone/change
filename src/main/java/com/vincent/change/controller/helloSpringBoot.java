@@ -18,17 +18,10 @@ public class helloSpringBoot {
     @Autowired
     UserInfoService userInfoService;
 
-    @ResponseBody
     @RequestMapping(value = "/hello", method= RequestMethod.GET )
-    public List index(){
-        ModelAndView mv = new ModelAndView();
-        mv.addObject("pringBoot say hello!");
-        mv.setViewName("hello");
-        List list = new ArrayList();
-        list.add("hello");
-        list.add("hello");
-        list.add("hello");
-        return list;
+    public String index(){
+        System.out.println("Enter function index");
+        return "index";
     }
 
     @ResponseBody

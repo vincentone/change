@@ -11,7 +11,7 @@
     <groupId>com.vincent</groupId>
     <artifactId>change</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>change</name>
     <description>Demo project for Spring Boot</description>
     <properties>
@@ -61,6 +61,13 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>1.2.0</version>
         </dependency>
+        <!--devtools热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -70,6 +77,12 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+<!--        自定打包jar名称-->
+<!--        <finalName></finalName>-->
+<!--        资源路径-->
+<!--        <resource>-->
+<!--            <directory>src/main/resources</directory>-->
+<!--        </resource>-->
     </build>
     <repositories>
         <repository>
